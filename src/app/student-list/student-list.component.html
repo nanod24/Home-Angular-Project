@@ -14,7 +14,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let student of userList"  (click)="selectStudent(student)">
+    <tr *ngFor="let student of userList"  [routerLink]=" ['/students' , student.id]">
 
 
       <td>{{ student.id }}</td>
@@ -25,7 +25,7 @@
     </tr>
     </tbody>
   </table>
-  <app-student-detail [student]="selectedStudent"></app-student-detail>
+
 </div>
 
 

@@ -4,7 +4,7 @@ import { User} from "../Shared/Models/user";
 import {NgForOf, NgClass, NgStyle} from "@angular/common";
 import {StudentDetailComponent} from "../student-detail/student-detail.component";
 import {StudentService} from "../services/student.service";
-
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-student-list',
@@ -12,7 +12,7 @@ import {StudentService} from "../services/student.service";
   imports: [
     NgForOf,
     NgForOf,
-    StudentDetailComponent, NgClass, NgStyle,
+    StudentDetailComponent, NgClass, NgStyle, RouterLink
   ],
   templateUrl: './student-list.component.html',
   styleUrl: './student-list.component.scss'
@@ -44,5 +44,5 @@ export class StudentListComponent {
     this.selectedStudent = student;
   }
 
-  protected readonly Object = Object;
+  //protected readonly Object = Object;
 }
